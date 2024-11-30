@@ -9,4 +9,9 @@ public class Jugador {
     private int puntajePartida;
     private int palabrasPartida;
     //Tiempo que ha durado en partidas
+
+
+    public Jugador() {
+
+    }
 }

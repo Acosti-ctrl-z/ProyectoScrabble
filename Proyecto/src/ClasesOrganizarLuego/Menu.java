@@ -16,7 +16,7 @@ public class Menu implements Iniciable{
             System.out.println("2. Manipular datos del juego (usuarios, estadísticas, partidas).");
             System.out.println("3. Salir. ");
 
-            switch (Recibir.recibirInt()) {
+            switch (Recibir.recibirInt("Ingrese su elección.")) {
                 case 1:
                     System.out.println("Aquí se inicia la partida.");
                     break;

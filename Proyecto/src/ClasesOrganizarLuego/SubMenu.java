@@ -13,7 +13,7 @@ public class SubMenu implements Iniciable{
             System.out.println("4. Eliminar un jugador.");
             System.out.println("5. Leer la lista de partidas.");
             System.out.println("6. Salir. ");
-            switch (Recibir.recibirInt()) {
+            switch (Recibir.recibirInt("Ingrese su elección.")) {
                 case 1:
                     System.out.println("Agregar un usario");
                     break;

@@ -8,12 +8,11 @@ public class Recibir {
     private static boolean valid = false;
     private static Scanner lectura=new Scanner (System.in);
     private static String revisar="";
-    private static String validIStr="";
 
 
-    public static int recibirInt(){
+    public static int recibirInt(String mensaje){
         while(!valid){
-            System.out.println("Ingrese un numero entero.");
+            System.out.println(mensaje);
             revisar=lectura.next();
             if(revisar.matches("[0-9]*")){
                 return Integer.parseInt(revisar);
@@ -25,7 +24,8 @@ public class Recibir {
         return 0;
     };
 
-    public static String recibirString(){
+    public static String recibirString(String mensaje){
+        System.out.println(mensaje);
         return lectura.next();
     };
 
