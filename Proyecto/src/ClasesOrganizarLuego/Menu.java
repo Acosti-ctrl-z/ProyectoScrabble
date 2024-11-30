@@ -1,24 +1,28 @@
 package ClasesOrganizarLuego;
 
-public class Menu {
+public class Menu implements Iniciable{
 
-    private static boolean salir= false;
+    private boolean salir= false;
 
-    public static void iniciarMenu() {
+    public Menu(){
+    }
+
+    public void iniciar() {
 
         while (!salir) {
 
             System.out.println("Opciones: ");
-            System.out.println("1. Submenú ");
-            System.out.println("2. Imprimir perro.");
+            System.out.println("1. Iniciar una partida. ");
+            System.out.println("2. Manipular datos del juego (usuarios, estadísticas, partidas).");
             System.out.println("3. Salir. ");
 
             switch (Recibir.recibirInt()) {
                 case 1:
-                    SubMenu.iniciarSubMenu();
+                    System.out.println("Aquí se inicia la partida.");
                     break;
                 case 2:
-                    System.out.println("Perro");
+                    SubMenu subMenu=new SubMenu();
+                    subMenu.iniciar();
                     break;
                 case 3:
                     System.out.println("Adiós");
