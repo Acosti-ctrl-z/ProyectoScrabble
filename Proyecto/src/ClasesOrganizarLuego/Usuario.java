@@ -7,12 +7,13 @@ public class Usuario {
     private int puntajeAcumulado;
     private int palabrasJugadas;
 
-    public Usuario(String alias, String correo){
-        this.alias=alias;
-        this.correo=correo;
+    public Usuario(){
+        this.alias= Recibir.recibirString("Ingrese el nombre del usuario.");
+        this.correo= Recibir.recibirString("Ingrese el email del usuario.");
         this.palabrasJugadas=0;
         this.puntajeAcumulado=0;
     }
+
 
     public void setAlias(String alias) {
         this.alias = alias;
