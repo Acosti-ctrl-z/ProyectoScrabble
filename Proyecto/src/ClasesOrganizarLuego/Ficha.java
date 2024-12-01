@@ -1,7 +1,7 @@
 package ClasesOrganizarLuego;
 
 public class Ficha {
-    private String letra;
+    private char letra;
     private int cantidad;
     private int puntaje;
 }

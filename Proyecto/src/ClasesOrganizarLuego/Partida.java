@@ -11,5 +11,6 @@ public class Partida {
         this.jugador1=jugador1;
         this.jugador2=jugador2;
         System.out.println("Partida iniciada por: "+jugador1.getName()+" y "+jugador2.getName());
+        this.tablero=new Tablero();
     }
 }
