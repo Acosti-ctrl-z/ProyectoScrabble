@@ -1,8 +1,12 @@
 package ClasesOrganizarLuego;
 
+import java.util.LinkedList;
+
 public class SubMenu implements Iniciable{
 
     private static boolean salir= false;
+    private ListaUsuarios users;
+
     public SubMenu(){}
     public void iniciar() {
         while (!salir) {
@@ -16,6 +20,7 @@ public class SubMenu implements Iniciable{
             switch (Recibir.recibirInt("Ingrese su elección.")) {
                 case 1:
                     System.out.println("Agregar un usario");
+                    users.agregarUsuario();
                     break;
                 case 2:
                     System.out.println("Printear jugadores");

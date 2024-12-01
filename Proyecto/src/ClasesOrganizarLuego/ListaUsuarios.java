@@ -1,12 +1,21 @@
 package ClasesOrganizarLuego;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListaUsuarios {
     private List<Usuario> listaUsuarios;
 
+    public List<Usuario> getListaUsuarios() {
+        return listaUsuarios;
+    }
+
+    public void setListaUsuarios(List<Usuario> listaUsuarios) {
+        this.listaUsuarios = listaUsuarios;
+    }
+
     public ListaUsuarios() {
-        this.listaUsuarios=null;
+        this.listaUsuarios= new ArrayList<>();
     }
 
     public void leerLista() {
@@ -63,7 +72,11 @@ public class ListaUsuarios {
         }
     }
 
-    public void agregarUsuario(Usuario usuarioNuevo){
-        this.listaUsuarios.add(usuarioNuevo);
+    public void agregarUsuario(){
+        if(listaUsuarios == null || listaUsuarios.isEmpty()){
+            this.listaUsuarios.add(new Usuario());
+        } else{
+            this.listaUsuarios.add(new Usuario());
+        }
     }
 }
