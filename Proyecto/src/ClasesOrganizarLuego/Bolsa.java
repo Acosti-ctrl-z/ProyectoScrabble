@@ -110,4 +110,9 @@ public class Bolsa {
             disponibles.remove(i);
         }
     }
+
+    public void refrescarPiezas(Jugador jugador){
+        jugador.getFichas().clear();
+        repartirFichas(jugador);
+    }
 }

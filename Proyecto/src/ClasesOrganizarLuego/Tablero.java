@@ -14,20 +14,6 @@ public class Tablero {
         }
     }
 
-    public void colocarFichaHorizontal(List<Ficha> colocar, int fila, int primeraPosicion){
-        for(Ficha ficha:colocar){
-            tablero[fila][primeraPosicion]=ficha;
-            primeraPosicion+=1;
-        }
-    }
-
-    public void colocarFichaVertical(List<Ficha> colocar, int fila, int primeraPosicion){
-        for(Ficha ficha:colocar){
-            tablero[fila][primeraPosicion]=ficha;
-            primeraPosicion+=1;
-        }
-    }
-
     public void mostrarTablero(){
         for(Ficha[] fila:tablero){
             for(Ficha ficha:fila){
