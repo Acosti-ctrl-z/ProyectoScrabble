@@ -22,11 +22,11 @@ public class Recibir {
             }
         }
         return 0;
-    };
+    }
 
     public static String recibirString(String mensaje){
         System.out.println(mensaje);
         return lectura.next();
-    };
+    }
 
 }

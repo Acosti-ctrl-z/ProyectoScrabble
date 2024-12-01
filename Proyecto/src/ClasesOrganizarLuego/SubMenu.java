@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class SubMenu implements Iniciable{
 
     private static boolean salir= false;
-    private ListaUsuarios users;
+    private ListaUsuarios users= new ListaUsuarios();
 
     public SubMenu(){}
     public void iniciar() {
@@ -24,6 +24,7 @@ public class SubMenu implements Iniciable{
                     break;
                 case 2:
                     System.out.println("Printear jugadores");
+                    users.leerLista();
                     break;
                 case 3:
                     System.out.println("Modificar jugadores");
