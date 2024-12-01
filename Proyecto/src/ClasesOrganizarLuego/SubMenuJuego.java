@@ -46,6 +46,7 @@ public class SubMenuJuego implements Iniciable {
                 case 1:
                     System.out.println("Nueva partida");
                     Partida partida=new Partida(jugador1,jugador2);
+                    partida.iniciar();
                     break;
                 case 2:
                     System.out.println("Continuar partida");

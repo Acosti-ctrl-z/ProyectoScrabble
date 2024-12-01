@@ -1,6 +1,6 @@
 package ClasesOrganizarLuego;
 
-public class Partida {
+public class Partida implements Iniciable{
     private Tablero tablero;
     private Bolsa bolsa;
     private Jugador jugador1;
@@ -12,5 +12,9 @@ public class Partida {
         this.jugador2=jugador2;
         System.out.println("Partida iniciada por: "+jugador1.getName()+" y "+jugador2.getName());
         this.tablero=new Tablero();
+    }
+
+    public void iniciar(){
+        tablero.mostrarTablero();
     }
 }
