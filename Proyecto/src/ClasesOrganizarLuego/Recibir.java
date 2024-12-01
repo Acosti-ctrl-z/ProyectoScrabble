@@ -12,7 +12,7 @@ public class Recibir {
 
     public static int recibirInt(String mensaje){
         while(!valid){
-            System.out.println(mensaje);
+            System.out.print(mensaje+" ");
             revisar=lectura.next();
             if(revisar.matches("[0-9]*")){
                 return Integer.parseInt(revisar);
@@ -25,7 +25,7 @@ public class Recibir {
     }
 
     public static String recibirString(String mensaje){
-        System.out.println(mensaje);
+        System.out.print(mensaje+" ");
         return lectura.next();
     }
 

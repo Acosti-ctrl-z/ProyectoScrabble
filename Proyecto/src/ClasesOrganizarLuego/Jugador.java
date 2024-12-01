@@ -11,7 +11,11 @@ public class Jugador {
     //Tiempo que ha durado en partidas
 
 
-    public Jugador() {
+    public Jugador(Usuario usuario) {
+        this.usuario=usuario;
+    }
 
+    public String getName(){
+        return usuario.getAlias();
     }
 }

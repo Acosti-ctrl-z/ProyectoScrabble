@@ -43,10 +43,12 @@ public class ListaUsuarios {
                 int objetivo=Recibir.recibirInt("Escriba el índice del ususario a modificar");
                 if(objetivo<1||objetivo>listaUsuarios.size()){
                     System.out.println("Objetivo no encontrado, vuelva a intentar.");
+                    break;
                 }else{
                     System.out.println("Objetivo encontrado.");
                     listaUsuarios.set(objetivo-1, new Usuario());
                     System.out.println("Usuario modificado.");
+                    break;
                 }
             }
 
@@ -66,6 +68,7 @@ public class ListaUsuarios {
                     System.out.println("Objetivo encontrado.");
                     listaUsuarios.remove(objetivo-1);
                     System.out.println("Usuario eliminado.");
+                    break;
                 }
             }
 
