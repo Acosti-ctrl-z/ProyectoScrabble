@@ -1,32 +1,24 @@
 package ClasesOrganizarLuego;
 
 public class Ficha {
-    private char letra;
-    private int cantidad;
+    private String letra;
     private int puntaje;
 
-    public Ficha(char letra) {
+    public Ficha(String letra, int puntaje) {
         this.letra = letra;
+        this.puntaje = puntaje;
     }
 
-    public char getLetra() {
+    public String getLetra() {
         return letra;
-    }
-
-    public int getCantidad() {
-        return cantidad;
     }
 
     public int getPuntaje() {
         return puntaje;
     }
 
-    public void setLetra(char letra) {
+    public void setLetra(String letra) {
         this.letra = letra;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
     }
 
     public void setPuntaje(int puntaje) {

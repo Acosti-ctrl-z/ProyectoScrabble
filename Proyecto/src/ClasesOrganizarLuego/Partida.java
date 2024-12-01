@@ -14,7 +14,16 @@ public class Partida implements Iniciable{
         this.tablero=new Tablero();
     }
 
+
     public void iniciar(){
-        tablero.mostrarTablero();
+        bolsa=new Bolsa();
+        bolsa.repartirFichas(jugador1);
+        bolsa.repartirFichas(jugador2);
+        for(Ficha ficha:jugador1.getFichas()){
+            System.out.println(ficha.getLetra());
+        }
+        for(Ficha ficha:jugador2.getFichas()){
+            System.out.println(ficha.getLetra());
+        }
     }
 }
