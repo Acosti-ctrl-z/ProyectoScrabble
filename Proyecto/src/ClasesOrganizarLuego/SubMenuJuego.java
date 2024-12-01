@@ -52,7 +52,12 @@ public class SubMenuJuego implements Iniciable {
                     System.out.println("Continuar partida");
                     break;
                 case 3:
-                    System.out.println("Modificar jugadores");
+                    System.out.println("Mostrar información de jugadores");
+                    System.out.print("1. ");
+                    jugador1.mostrarDatos();
+                    System.out.print("2. ");
+                    jugador2.mostrarDatos();
+                    break;
                 case 4:
                     System.out.println("Cerrando submenú.");
                     salir = true;

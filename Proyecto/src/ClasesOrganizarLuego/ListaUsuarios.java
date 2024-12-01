@@ -25,10 +25,7 @@ public class ListaUsuarios {
             int posicion = 1;
             for (Usuario usuario : this.listaUsuarios) {
                 System.out.print(posicion + ". ");
-                System.out.println("Alias: " + usuario.getAlias() + ".");
-                System.out.println("Email: " + usuario.getCorreo() + ".");
-                System.out.println("Palabras jugadas: " + usuario.getPalabrasJugadas() + ".");
-                System.out.println("Palabras jugadas: " + usuario.getPuntajeAcumulado() + ".");
+                usuario.mostrarDatos();
                 posicion = posicion + 1;
             }
         }
@@ -46,7 +43,9 @@ public class ListaUsuarios {
                     break;
                 }else{
                     System.out.println("Objetivo encontrado.");
-                    listaUsuarios.set(objetivo-1, new Usuario());
+                    Usuario aModificar=listaUsuarios.get(objetivo-1);
+                    aModificar.modificarDatos();
+                    listaUsuarios.set(objetivo-1, aModificar);
                     System.out.println("Usuario modificado.");
                     break;
                 }
