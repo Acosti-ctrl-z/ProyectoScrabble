@@ -15,12 +15,29 @@ public class Tablero {
     }
 
     public void mostrarTablero(){
+        for(int i=1; i<=9; i+=1){
+            System.out.print(" "+i+"  ");
+        }
+        for(int i=10; i<=15; i+=1){
+            System.out.print(" "+i+" ");
+        }
+        System.out.print("\n");
+        int i=1;
         for(Ficha[] fila:tablero){
-            for(Ficha ficha:fila){
-                System.out.print(ficha.getLetra());
+            if(i<10){
+            System.out.print(""+i+" ");}
+            else{
+                System.out.print(""+i+"");
             }
+            for(Ficha ficha:fila){
+                System.out.print(" "+ficha.getLetra()+"| ");
+            }i+=1;
             System.out.print("\n");
         }
+    }
+
+    public void colocarFicha(){
+
     }
 
 }

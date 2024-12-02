@@ -35,30 +35,27 @@ public class Partida implements Iniciable{
             turno(player1);
             turno(player2);
             if(acabado()){
-                terminarJuego=false;
+                terminarJuego=true;
             }
         }
     }
 
     public void turno(Jugador jugador){
         boolean salir=false;
-        System.out.println("Jugador "+jugador.getName()+", sus fichas son: ");
-        for(Ficha ficha:jugador.getFichas()){
-            System.out.print(ficha.getLetra()+", ");
-        }
+        jugador.mostrarFichas();
         while (!salir) {
             System.out.println("Qué desea hacer?: ");
-            System.out.println("1. Colocar una pieza.");
+            System.out.println("1. Colocar piezas.");
             System.out.println("2. Refrescar piezas y saltar turno.");
             System.out.println("3. Saltar turno.");
             switch (Recibir.recibirInt("Ingrese su elección.")) {
                 case 1:
-                    System.out.println("colocar una pieza");
-
-                    salir=true;
+                    System.out.println("colocar piezas");
+                    salir=this.colocarLetras(jugador);
                     break;
                 case 2:
                     System.out.println("refrescar píezas");
+                    bolsa.refrescarPiezas(jugador);
                     jugador.setSaltos(jugador.getSaltos()+1);
                     salir=true;
                     break;
@@ -74,9 +71,19 @@ public class Partida implements Iniciable{
         }
     }
 
+    public boolean colocarLetras(Jugador jugador){
+        boolean salir=false;
+        Tablero tableroTemporal=this.tablero;
+        Jugador jugadorTemporal=jugador;
+        System.out.println("Elige las piezas que quieres colocar escribiendo la letra, luego la fila y columna donde la quieres colocar.");
+        jugadorTemporal.mostrarFichas();
+        tableroTemporal.mostrarTablero();
+        return salir;
+    }
+
     public boolean acabado(){
         boolean condicion;
-        if(this.jugador1.getSaltos()>=2&&this.jugador2.getSaltos()>=2){
+        if((this.jugador1.getSaltos()>=2&&this.jugador2.getSaltos()>=2)||((jugador1.getFichas().isEmpty()||jugador2.getFichas().isEmpty())&&bolsa.getDisponibles().isEmpty())){
             condicion=true;
         }else{
             condicion=false;

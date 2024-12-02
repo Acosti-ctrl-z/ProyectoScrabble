@@ -22,6 +22,14 @@ public class Jugador {
 
     }
 
+    public void mostrarFichas(){
+        System.out.println("Jugador "+usuario.getAlias()+", sus fichas son: ");
+        for(Ficha ficha:fichas){
+            System.out.print(ficha.getLetra()+", ");
+        }
+        System.out.print("\n");
+    }
+
     public void mostrarDatos(){
         usuario.mostrarDatos();
     }
