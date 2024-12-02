@@ -38,10 +38,14 @@ public class Partida implements Iniciable{
                 terminarJuego=true;
             }
         }
+        System.out.println("Fin del juego. ");
     }
 
     public void turno(Jugador jugador){
         boolean salir=false;
+        if(jugador.getFichas().size()<7){
+            bolsa.repartirFichas(jugador);
+        }
         jugador.mostrarFichas();
         while (!salir) {
             System.out.println("Qué desea hacer?: ");
@@ -72,22 +76,39 @@ public class Partida implements Iniciable{
     }
 
     public boolean colocarLetras(Jugador jugador){
-        boolean salir=false;
+        boolean aprobado=false;
         Tablero tableroTemporal=this.tablero;
-        Jugador jugadorTemporal=jugador;
+        Jugador jugadorInicial=jugador;
         System.out.println("Elige las piezas que quieres colocar escribiendo la letra, luego la fila y columna donde la quieres colocar.");
-        jugadorTemporal.mostrarFichas();
+        jugador.mostrarFichas();
         tableroTemporal.mostrarTablero();
-        return salir;
+        boolean salir= false;
+        String letra;
+        while(!salir){
+            letra=Recibir.recibirString("Escribe la letra que quieres usar");
+            for(Ficha ficha:jugador.getFichas()){
+                if (ficha.getLetra().equals(letra)){
+                    tableroTemporal.colocarFicha(ficha, Recibir.recibirInt("Ingrese la fila: "), Recibir.recibirInt("Ingrese la columns: "));
+                    jugador.getFichas().remove(ficha);
+                    aprobado=true;
+                    break;
+                }
+            }
+            letra=Recibir.recibirString("Quiere colocar otra letra? (S o N)");
+            if(letra.equals("N")||letra.equals("n")){
+                salir=true;
+            }
+        }
+        this.tablero=tableroTemporal;
+        return aprobado;
     }
 
-    public boolean acabado(){
+    public boolean acabado() {
         boolean condicion;
-        if((this.jugador1.getSaltos()>=2&&this.jugador2.getSaltos()>=2)||((jugador1.getFichas().isEmpty()||jugador2.getFichas().isEmpty())&&bolsa.getDisponibles().isEmpty())){
-            condicion=true;
-        }else{
-            condicion=false;
+        if ((this.jugador1.getSaltos() >= 2 && this.jugador2.getSaltos() >= 2) || ((jugador1.getFichas().isEmpty() || jugador2.getFichas().isEmpty()) && bolsa.getDisponibles().isEmpty())) {
+            return true;
+        } else {
+            return false;
         }
-        return condicion;
     }
 }

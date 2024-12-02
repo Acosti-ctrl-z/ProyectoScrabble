@@ -1,7 +1,5 @@
 package ClasesOrganizarLuego;
 
-import java.util.List;
-
 public class Tablero {
     private Ficha[][] tablero;
 
@@ -36,8 +34,8 @@ public class Tablero {
         }
     }
 
-    public void colocarFicha(){
-
+    public void colocarFicha(Ficha ficha, int fila, int columna){
+        this.tablero[fila-1][columna-1]=ficha;
     }
 
 }
