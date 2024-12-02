@@ -3,10 +3,10 @@ package ClasesOrganizarLuego;
 public class Menu implements Iniciable{
 
     private ListaUsuarios users= new ListaUsuarios();
-
     private boolean salir= false;
 
     public Menu(){
+        this.users=LectorJson.leerDatos(this.users,"ListaUsuarios");
     }
 
     public void iniciar() {

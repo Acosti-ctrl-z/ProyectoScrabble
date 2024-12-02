@@ -21,7 +21,8 @@ public class SubMenuDatos implements Iniciable{
             switch (Recibir.recibirInt("Ingrese su elección.")) {
                 case 1:
                     System.out.println("Agregar un usario");
-                    users.agregarUsuario();
+                    users.agregarUsuarioNuevo();
+                    EscritorJson.guardarDatos(users, "ListaUsuarios");
                     break;
                 case 2:
                     System.out.println("Printear jugadores");

@@ -10,15 +10,23 @@ public class Usuario {
 
     public Usuario(){
         this.alias= Recibir.recibirString("Ingrese el nombre del usuario.");
-        this.correo= Recibir.recibirString("Ingrese el email del usuario.");
+        this.correo= Recibir.recibirEmail("Ingrese el email del usuario.");
         this.palabrasJugadas=0;
         this.puntajeAcumulado=0;
         this.partidasGanadas=0;
     }
 
+    public Usuario(String alias, String correo, int puntajeAcumulado, int partidasGanadas, int palabrasJugadas) {
+        this.alias = alias;
+        this.correo = correo;
+        this.puntajeAcumulado = puntajeAcumulado;
+        this.partidasGanadas = partidasGanadas;
+        this.palabrasJugadas = palabrasJugadas;
+    }
+
     public void modificarDatos(){
-        this.alias= Recibir.recibirString("Ingrese el nombre del usuario.");
-        this.correo= Recibir.recibirString("Ingrese el email del usuario.");
+        this.alias= Recibir.recibirString("Ingrese el nuevo nombre del usuario.");
+        this.correo= Recibir.recibirEmail("Ingrese el nuevo email del usuario.");
     }
 
     public void mostrarDatos(){
@@ -44,6 +52,10 @@ public class Usuario {
         this.palabrasJugadas += palabrasJugadas;
     }
 
+    public void aumentarPartidasGanadas() {
+        this.palabrasJugadas += 1;
+    }
+
     public String getAlias() {
         return alias;
     }
@@ -60,19 +72,7 @@ public class Usuario {
         return palabrasJugadas;
     }
 
-    public void setPuntajeAcumulado(int puntajeAcumulado) {
-        this.puntajeAcumulado = puntajeAcumulado;
-    }
-
     public int getPartidasGanadas() {
         return partidasGanadas;
-    }
-
-    public void setPartidasGanadas(int partidasGanadas) {
-        this.partidasGanadas = partidasGanadas;
-    }
-
-    public void setPalabrasJugadas(int palabrasJugadas) {
-        this.palabrasJugadas = palabrasJugadas;
     }
 }

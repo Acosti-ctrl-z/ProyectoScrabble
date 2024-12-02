@@ -100,6 +100,7 @@ public class Partida implements Iniciable{
             }
         }
         this.tablero=tableroTemporal;
+        jugador.setSaltos(0);
         return aprobado;
     }
 

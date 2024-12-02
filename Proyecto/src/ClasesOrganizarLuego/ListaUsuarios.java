@@ -74,11 +74,11 @@ public class ListaUsuarios {
         }
     }
 
-    public void agregarUsuario(){
-        if(listaUsuarios == null || listaUsuarios.isEmpty()){
+    public void agregarUsuarioNuevo(){
             this.listaUsuarios.add(new Usuario());
-        } else{
-            this.listaUsuarios.add(new Usuario());
-        }
+    }
+
+    public void agregarUsuario(Usuario usuario){
+        this.listaUsuarios.add(usuario);
     }
 }
