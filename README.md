@@ -7,3 +7,4 @@ No pudimos hacer lo de sumar puntos y verificar que una palabra exista, el méto
 Se nos olvidó mencionarlo en la defensa grupal.
 Gracias por la oportunidad de entregarlo hoy hasta las 12 del medio día, se aprovechó la prórroga.
 Tenga excelente día.
+P.D. Puede darse el caso que aparezca como si tuviera errores pero corre sin problemas.
