@@ -1,4 +1,4 @@
-Informe.\n
+Informe. 
 Realizado por Acosta Jesus, Rodrigo Rolando y Rojas Leonel.
 El proyecto está entero en el ultimo commit (Proyecto.zip)
 El javadoc está en la carpeta de Proyecto, se llama index. No entendemos muy bien como funciona, si hay algún problema al acceder nos avisa.
