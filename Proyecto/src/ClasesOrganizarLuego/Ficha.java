@@ -10,11 +10,11 @@ public class Ficha {
     }
 
     public String getLetra() {
-        return letra;
+        return this.letra;
     }
 
     public int getPuntaje() {
-        return puntaje;
+        return this.puntaje;
     }
 
     public void setLetra(String letra) {

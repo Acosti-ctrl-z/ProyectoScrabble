@@ -35,7 +35,7 @@ public class Tablero {
         int i=1;
         for(Ficha[] fila:tablero){
             if(i<10){
-            System.out.print(""+i+" ");}
+                System.out.print(""+i+" ");}
             else{
                 System.out.print(""+i+"");
             }

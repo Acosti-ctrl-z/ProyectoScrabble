@@ -1,16 +1,21 @@
 package ClasesOrganizarLuego;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Iterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class EscritorJson {
-    //Guarda los datos de los Usuarios en un JSON
-    public static void guardarDatos(ListaUsuarios usuarios, String nombreArchivo){
+    public EscritorJson() {
+    }
+
+    public static void guardarDatos(ListaUsuarios usuarios, String nombreArchivo) {
         JSONArray jsonArray = new JSONArray();
-        for(Usuario usuario : usuarios.getListaUsuarios()) {
+        Iterator var3 = usuarios.getListaUsuarios().iterator();
+
+        while(var3.hasNext()) {
+            Usuario usuario = (Usuario)var3.next();
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("alias", usuario.getAlias());
             jsonObject.put("correo", usuario.getCorreo());
@@ -20,13 +25,26 @@ public class EscritorJson {
             jsonArray.add(jsonObject);
         }
 
-        //Escribe lo datos en el JSON
-        try (FileWriter file = new FileWriter(nombreArchivo)) {
-            file.write(jsonArray.toJSONString());
-            System.out.println("Archivos gruardados con exito!");
-        } catch (IOException e) {
+        try {
+            FileWriter file = new FileWriter(nombreArchivo);
+
+            try {
+                file.write(jsonArray.toJSONString());
+                System.out.println("Archivos gruardados con exito!");
+            } catch (Throwable var7) {
+                try {
+                    file.close();
+                } catch (Throwable var6) {
+                    var7.addSuppressed(var6);
+                }
+
+                throw var7;
+            }
+
+            file.close();
+        } catch (IOException var8) {
             System.out.println("Ha ocurrido un error para guardar los datos!");
         }
-    }
 
+    }
 }

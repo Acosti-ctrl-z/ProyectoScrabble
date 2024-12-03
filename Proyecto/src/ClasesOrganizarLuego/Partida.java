@@ -87,9 +87,9 @@ public class Partida implements Iniciable{
         int fila;
         int columna;
         while(!salir){
-            letra=Recibir.recibirString("Escribe la letra que quieres usar");
-            fila=Recibir.recibirInt("Ingrese la fila: ");
-            columna=Recibir.recibirInt("Ingrese la columna: ");
+            letra=(Recibir.recibirString("Escribe la letra que quieres usar")).toUpperCase();
+            fila=Recibir.recibirDimension("Ingrese la fila: ");
+            columna=Recibir.recibirDimension("Ingrese la columna: ");
             for(Ficha ficha:jugador.getFichas()){
                 if (ficha.getLetra().equals(letra)){
                     if(Validador.estaVacio(tableroTemporal, fila, columna)){
@@ -102,8 +102,8 @@ public class Partida implements Iniciable{
                     break;
                 }
             }
-            letra=Recibir.recibirString("Quiere colocar otra letra? (S o N)");
-            if(letra.equals("N")||letra.equals("n")){
+            letra=(Recibir.recibirString("Quiere colocar otra letra? (S o N)")).toUpperCase();
+            if(letra.equals("N")){
                 salir=true;
             }
         }
@@ -113,7 +113,6 @@ public class Partida implements Iniciable{
     }
 
     public boolean acabado() {
-        boolean condicion;
         if ((this.jugador1.getSaltos() >= 2 && this.jugador2.getSaltos() >= 2) || ((jugador1.getFichas().isEmpty() || jugador2.getFichas().isEmpty()) && bolsa.getDisponibles().isEmpty())) {
             return true;
         } else {

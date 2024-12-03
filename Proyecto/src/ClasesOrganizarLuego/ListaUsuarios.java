@@ -1,13 +1,14 @@
 package ClasesOrganizarLuego;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListaUsuarios {
-    private List<Usuario> listaUsuarios;
+    private List<Usuario> listaUsuarios = new ArrayList();
 
     public List<Usuario> getListaUsuarios() {
-        return listaUsuarios;
+        return this.listaUsuarios;
     }
 
     public void setListaUsuarios(List<Usuario> listaUsuarios) {
@@ -15,70 +16,68 @@ public class ListaUsuarios {
     }
 
     public ListaUsuarios() {
-        this.listaUsuarios= new ArrayList<>();
     }
 
     public void leerLista() {
-        if (listaUsuarios == null || listaUsuarios.isEmpty()) {
-            System.out.println("No hay ningún usuario registrado");
-        } else {
+        if (this.listaUsuarios != null && !this.listaUsuarios.isEmpty()) {
             int posicion = 1;
-            for (Usuario usuario : this.listaUsuarios) {
+
+            for(Iterator var2 = this.listaUsuarios.iterator(); var2.hasNext(); ++posicion) {
+                Usuario usuario = (Usuario)var2.next();
                 System.out.print(posicion + ". ");
                 usuario.mostrarDatos();
-                posicion = posicion + 1;
             }
+        } else {
+            System.out.println("No hay ningún usuario registrado");
         }
+
     }
 
-    public void modificarUsuario(){
-        if (listaUsuarios == null || listaUsuarios.isEmpty()) {
-            System.out.println("No hay ningún usuario registrado");
-        } else {
+    public void modificarUsuario() {
+        if (this.listaUsuarios != null && !this.listaUsuarios.isEmpty()) {
             this.leerLista();
-            while(true){
-                int objetivo=Recibir.recibirInt("Escriba el índice del ususario a modificar");
-                if(objetivo<1||objetivo>listaUsuarios.size()){
-                    System.out.println("Objetivo no encontrado, vuelva a intentar.");
-                    break;
-                }else{
-                    System.out.println("Objetivo encontrado.");
-                    Usuario aModificar=listaUsuarios.get(objetivo-1);
-                    aModificar.modificarDatos();
-                    listaUsuarios.set(objetivo-1, aModificar);
-                    System.out.println("Usuario modificado.");
-                    break;
-                }
+            int objetivo = Recibir.recibirInt("Escriba el índice del ususario a modificar");
+            if (objetivo >= 1 && objetivo <= this.listaUsuarios.size()) {
+                System.out.println("Objetivo encontrado.");
+                Usuario aModificar = (Usuario)this.listaUsuarios.get(objetivo - 1);
+                aModificar.modificarDatos();
+                this.listaUsuarios.set(objetivo - 1, aModificar);
+                System.out.println("Usuario modificado.");
+            } else {
+                System.out.println("Objetivo no encontrado, vuelva a intentar.");
             }
-
+        } else {
+            System.out.println("No hay ningún usuario registrado");
         }
+
     }
 
-    public void eliminarUsuario(){
-        if (listaUsuarios == null || listaUsuarios.isEmpty()) {
-            System.out.println("No hay ningún usuario registrado");
-        } else {
+    public void eliminarUsuario() {
+        if (this.listaUsuarios != null && !this.listaUsuarios.isEmpty()) {
             this.leerLista();
-            while(true){
-                int objetivo=Recibir.recibirInt("Escriba el índice del ususario a borar");
-                if(objetivo<1||objetivo>listaUsuarios.size()){
-                    System.out.println("Objetivo inválido, vuelva a intentar.");
-                }else{
+
+            while(true) {
+                int objetivo = Recibir.recibirInt("Escriba el índice del ususario a borar");
+                if (objetivo >= 1 && objetivo <= this.listaUsuarios.size()) {
                     System.out.println("Objetivo encontrado.");
-                    listaUsuarios.remove(objetivo-1);
+                    this.listaUsuarios.remove(objetivo - 1);
                     System.out.println("Usuario eliminado.");
                     break;
                 }
+
+                System.out.println("Objetivo inválido, vuelva a intentar.");
             }
-
+        } else {
+            System.out.println("No hay ningún usuario registrado");
         }
+
     }
 
-    public void agregarUsuarioNuevo(){
-            this.listaUsuarios.add(new Usuario());
+    public void agregarUsuarioNuevo() {
+        this.listaUsuarios.add(new Usuario());
     }
 
-    public void agregarUsuario(Usuario usuario){
+    public void agregarUsuario(Usuario usuario) {
         this.listaUsuarios.add(usuario);
     }
 }

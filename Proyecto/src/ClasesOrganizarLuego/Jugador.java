@@ -1,41 +1,42 @@
 package ClasesOrganizarLuego;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Jugador {
-
     private Usuario usuario;
     private List<Ficha> fichas;
     private int puntajePartida;
     private int palabrasPartida;
     private int saltos;
-    //Tiempo que ha durado en partidas
-
 
     public Jugador(Usuario usuario) {
-        this.usuario=usuario;
-        this.fichas= new ArrayList<>();
-        this.puntajePartida=0;
-        this.palabrasPartida=0;
-        this.saltos=0;
-
+        this.usuario = usuario;
+        this.fichas = new ArrayList();
+        this.puntajePartida = 0;
+        this.palabrasPartida = 0;
+        this.saltos = 0;
     }
 
-    public void mostrarFichas(){
-        System.out.println("Jugador "+usuario.getAlias()+", sus fichas son: ");
-        for(Ficha ficha:fichas){
-            System.out.print(ficha.getLetra()+", ");
+    public void mostrarFichas() {
+        System.out.println("Jugador " + this.usuario.getAlias() + ", sus fichas son: ");
+        Iterator var1 = this.fichas.iterator();
+
+        while(var1.hasNext()) {
+            Ficha ficha = (Ficha)var1.next();
+            System.out.print(ficha.getLetra() + ", ");
         }
+
         System.out.print("\n");
     }
 
-    public void mostrarDatos(){
-        usuario.mostrarDatos();
+    public void mostrarDatos() {
+        this.usuario.mostrarDatos();
     }
 
-    public String getName(){
-        return usuario.getAlias();
+    public String getName() {
+        return this.usuario.getAlias();
     }
 
     public void setFichas(List<Ficha> fichas) {
@@ -43,7 +44,7 @@ public class Jugador {
     }
 
     public int getPuntajePartida() {
-        return puntajePartida;
+        return this.puntajePartida;
     }
 
     public void setPuntajePartida(int puntajePartida) {
@@ -51,7 +52,7 @@ public class Jugador {
     }
 
     public int getPalabrasPartida() {
-        return palabrasPartida;
+        return this.palabrasPartida;
     }
 
     public void setPalabrasPartida(int palabrasPartida) {
@@ -59,7 +60,7 @@ public class Jugador {
     }
 
     public int getSaltos() {
-        return saltos;
+        return this.saltos;
     }
 
     public void setSaltos(int saltos) {
@@ -67,11 +68,10 @@ public class Jugador {
     }
 
     public List<Ficha> getFichas() {
-        return fichas;
+        return this.fichas;
     }
 
-    public void agregarFicha(Ficha ficha){
-        fichas.add(ficha);
+    public void agregarFicha(Ficha ficha) {
+        this.fichas.add(ficha);
     }
-
 }

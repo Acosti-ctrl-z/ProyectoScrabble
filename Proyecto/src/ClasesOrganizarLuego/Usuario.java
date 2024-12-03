@@ -1,19 +1,18 @@
 package ClasesOrganizarLuego;
 
 public class Usuario {
-
     private String alias;
     private String correo;
     private int puntajeAcumulado;
     private int partidasGanadas;
     private int palabrasJugadas;
 
-    public Usuario(){
-        this.alias= Recibir.recibirString("Ingrese el nombre del usuario.");
-        this.correo= Recibir.recibirEmail("Ingrese el email del usuario.");
-        this.palabrasJugadas=0;
-        this.puntajeAcumulado=0;
-        this.partidasGanadas=0;
+    public Usuario() {
+        this.alias = Recibir.recibirString("Ingrese el nombre del usuario.");
+        this.correo = Recibir.recibirEmail("Ingrese el email del usuario.");
+        this.palabrasJugadas = 0;
+        this.puntajeAcumulado = 0;
+        this.partidasGanadas = 0;
     }
 
     public Usuario(String alias, String correo, int puntajeAcumulado, int partidasGanadas, int palabrasJugadas) {
@@ -24,12 +23,12 @@ public class Usuario {
         this.palabrasJugadas = palabrasJugadas;
     }
 
-    public void modificarDatos(){
-        this.alias= Recibir.recibirString("Ingrese el nuevo nombre del usuario.");
-        this.correo= Recibir.recibirEmail("Ingrese el nuevo email del usuario.");
+    public void modificarDatos() {
+        this.alias = Recibir.recibirString("Ingrese el nuevo nombre del usuario.");
+        this.correo = Recibir.recibirEmail("Ingrese el nuevo email del usuario.");
     }
 
-    public void mostrarDatos(){
+    public void mostrarDatos() {
         System.out.println("Alias: " + this.alias + ".");
         System.out.println("Email: " + this.correo + ".");
         System.out.println("Palabras jugadas: " + this.palabrasJugadas + ".");
@@ -53,26 +52,26 @@ public class Usuario {
     }
 
     public void aumentarPartidasGanadas() {
-        this.palabrasJugadas += 1;
+        ++this.palabrasJugadas;
     }
 
     public String getAlias() {
-        return alias;
+        return this.alias;
     }
 
     public String getCorreo() {
-        return correo;
+        return this.correo;
     }
 
     public int getPuntajeAcumulado() {
-        return puntajeAcumulado;
+        return this.puntajeAcumulado;
     }
 
     public int getPalabrasJugadas() {
-        return palabrasJugadas;
+        return this.palabrasJugadas;
     }
 
     public int getPartidasGanadas() {
-        return partidasGanadas;
+        return this.partidasGanadas;
     }
 }

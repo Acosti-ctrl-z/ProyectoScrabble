@@ -8,9 +8,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-
 public class ListaDePalabras {
-    private static List<String> listaLetras = new ArrayList<>();
+    private static List<String> listaLetras = new ArrayList();
 
     public ListaDePalabras() {
     }
@@ -24,19 +23,19 @@ public class ListaDePalabras {
                 while((linea = br.readLine()) != null) {
                     listaLetras.add(linea);
                 }
-            } catch (Throwable var5) {
+            } catch (Throwable var6) {
                 try {
                     br.close();
-                } catch (Throwable var4) {
-                    var5.addSuppressed(var4);
+                } catch (Throwable var5) {
+                    var6.addSuppressed(var5);
                 }
 
-                throw var5;
+                throw var6;
             }
 
             br.close();
-        } catch (IOException var6) {
-            System.err.println("Error al leer el archivo: " + var6.getMessage());
+        } catch (IOException var7) {
+            System.err.println("Error al leer el archivo: " + var7.getMessage());
         }
 
         return listaLetras;
@@ -45,15 +44,13 @@ public class ListaDePalabras {
     public static boolean verificacion(List<String> lista, String ruta) {
         Iterator var2 = lista.iterator();
 
-        String s;
-        do {
-            if (!var2.hasNext()) {
-                return false;
+        while(var2.hasNext()) {
+            String s = (String)var2.next();
+            if (Objects.equals(s, ruta)) {
+                return true;
             }
+        }
 
-            s = (String)var2.next();
-        } while(!Objects.equals(s, ruta));
-
-        return true;
+        return false;
     }
 }
