@@ -14,4 +14,8 @@ public class Validador {
         return ListaDePalabras.verificacion(palabras, palabra);
     }
 
+    public static boolean estaVacio(Tablero posicion, int fila, int columna){
+        return posicion.getTablero()[fila - 1][columna - 1].getLetra().equals(" ");
+    }
+
 }

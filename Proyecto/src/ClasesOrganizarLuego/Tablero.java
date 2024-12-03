@@ -3,6 +3,18 @@ package ClasesOrganizarLuego;
 public class Tablero {
     private Ficha[][] tablero;
 
+    public Tablero(Ficha[][] tablero) {
+        this.tablero = tablero;
+    }
+
+    public Ficha[][] getTablero() {
+        return tablero;
+    }
+
+    public void setTablero(Ficha[][] tablero) {
+        this.tablero = tablero;
+    }
+
     public Tablero() {
         this.tablero = new Ficha[15][15];
         for(int i=0; i<=14; i+=1){

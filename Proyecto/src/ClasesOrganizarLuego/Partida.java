@@ -84,13 +84,21 @@ public class Partida implements Iniciable{
         tableroTemporal.mostrarTablero();
         boolean salir= false;
         String letra;
+        int fila;
+        int columna;
         while(!salir){
             letra=Recibir.recibirString("Escribe la letra que quieres usar");
+            fila=Recibir.recibirInt("Ingrese la fila: ");
+            columna=Recibir.recibirInt("Ingrese la columna: ");
             for(Ficha ficha:jugador.getFichas()){
                 if (ficha.getLetra().equals(letra)){
-                    tableroTemporal.colocarFicha(ficha, Recibir.recibirInt("Ingrese la fila: "), Recibir.recibirInt("Ingrese la columns: "));
-                    jugador.getFichas().remove(ficha);
-                    aprobado=true;
+                    if(Validador.estaVacio(tableroTemporal, fila, columna)){
+                        tableroTemporal.colocarFicha(ficha, fila, columna);
+                        jugador.getFichas().remove(ficha);
+                        aprobado=true;
+                    }else{
+                        System.out.println("Error, el espacio seleccionado ya esta ocupado");
+                    }
                     break;
                 }
             }
