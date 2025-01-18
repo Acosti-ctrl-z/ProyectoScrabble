@@ -1,4 +1,4 @@
-package com.example.demoscrabble.Modelo;
+package modelo;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

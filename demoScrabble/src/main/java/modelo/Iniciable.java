@@ -1,4 +1,4 @@
-package com.example.demoscrabble.Modelo;
+package modelo;
 
 /**Interfaz Iniciable, que define el comportamiento iniciar() en las clases que lo implementan
  *

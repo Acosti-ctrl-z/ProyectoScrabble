@@ -1,4 +1,4 @@
-package com.example.demoscrabble.Modelo;
+package modelo;
 import javafx.scene.image.Image;
 /**
  * Cada ficha individual del juego

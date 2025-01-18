@@ -1,4 +1,4 @@
-package com.example.demoscrabble.Modelo;
+package modelo;
 
 
 import java.util.ArrayList;
