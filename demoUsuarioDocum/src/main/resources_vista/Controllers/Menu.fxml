@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="309.0" prefWidth="347.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <Label fx:id="welcomeText" alignment="CENTER" text="Menu Jugadores">
+      <font>
+         <Font name="Calibri" size="24.0" />
+      </font></Label>
+  <Button fx:id="BotonAgregar" onAction="#onAgregarUsuarioClick" text="Agregar Usuario" />
+   <Button fx:id="BotonEstadisticas" mnemonicParsing="false" onAction="#onVerEstadisticasClick" text="Ver Estadísticas" />
+   <Button fx:id="BotonModificar" mnemonicParsing="false" onAction="#onModificarDatosClick" text="Modificar Datos" />
+   <Button fx:id="BotonEliminar" mnemonicParsing="false" onAction="#onEliminarJugadorClick" text="Eliminar Jugador" />
+   <Button fx:id="BotonLista" mnemonicParsing="false" onAction="#onMostrarListaClick" text="Lista de partidas" />
+</VBox>

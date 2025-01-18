@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EstadisticasController">
+   <children>
+      <Label alignment="CENTER" text="Estadisticas">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label text="Indice del jugador" />
+            <Region prefHeight="70.0" prefWidth="43.0" />
+            <TextField fx:id="indiceJtext" />
+         </children></HBox>
+      <Button fx:id="BotonCargarInformacion" mnemonicParsing="false" onAction="#estadisticasJugador" text="Cargar Informacion" />
+      <Region prefHeight="26.0" prefWidth="600.0" />
+      <VBox alignment="CENTER" prefHeight="145.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="nombreText" alignment="CENTER" prefHeight="30.0" prefWidth="127.0" text="Nombre: " textAlignment="CENTER" />
+            <Label fx:id="correoText" alignment="CENTER" prefHeight="26.0" prefWidth="319.0" text="Correo: " textAlignment="CENTER" />
+            <Label fx:id="palabrasText" alignment="CENTER" prefHeight="30.0" prefWidth="134.0" text="Palabras Jugadas: " textAlignment="CENTER" />
+            <Label fx:id="puntajeText" alignment="CENTER" prefHeight="30.0" prefWidth="134.0" text="Puntaje total: " textAlignment="CENTER" />
+            <Label fx:id="partidasText" alignment="CENTER" prefHeight="26.0" prefWidth="152.0" text="Partidas Ganadas: " textAlignment="CENTER" />
+         </children>
+      </VBox>
+      <Region prefHeight="17.0" prefWidth="600.0" />
+      <Region prefHeight="21.0" prefWidth="600.0" />
+      <Label fx:id="estadisticasText" text=". . . " />
+      <Button fx:id="BotonRegresar" mnemonicParsing="false" onAction="#onRegresarMenuClick" text="Regresar" />
+   </children>
+</VBox>

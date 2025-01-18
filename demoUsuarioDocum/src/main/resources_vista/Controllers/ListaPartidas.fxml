@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListaPartidasController">
+    <children>
+        <Label text="Lista de Partidas">
+            <font>
+                <Font name="Calibri Italic" size="24.0" />
+            </font>
+        </Label>
+      <Region prefHeight="72.0" prefWidth="467.0" />
+      <Label fx:id="listaText" text=". . ." />
+        <Button fx:id="BotonMostrar" mnemonicParsing="false" onAction="#listaPartidas" text="Mostrar las partidas" />
+        <Region prefHeight="23.0" prefWidth="600.0" />
+        <Button fx:id="BotonRegresar" mnemonicParsing="false" onAction="#onRegresarMenuClick" text="Regresar" />
+    </children>
+</VBox>

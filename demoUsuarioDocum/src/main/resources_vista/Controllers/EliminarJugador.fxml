@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EliminarJugadorController">
+    <children>
+        <Label text="Eliminar Jugador">
+            <font>
+                <Font name="Calibri Italic" size="24.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="83.0" prefWidth="634.0">
+            <children>
+                <Label text="Inidice del jugador a Eliminar" />
+                <Region prefHeight="62.0" prefWidth="81.0" />
+                <TextField fx:id="indiceJtext" />
+            </children></HBox>
+      <Label fx:id="eliminarText" text=". . ." />
+        <Button fx:id="BotonEliminarJugador" mnemonicParsing="false" onAction="#eliminarJugador" text="Eliminar" />
+        <Region prefHeight="23.0" prefWidth="600.0" />
+        <Button fx:id="BotonRegresar" mnemonicParsing="false" onAction="#onRegresarMenuClick" text="Regresar" />
+    </children>
+</VBox>

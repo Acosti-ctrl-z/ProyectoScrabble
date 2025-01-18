@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AgregarUsuarioController">
+   <children>
+      <Label text="Registrar Jugador" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Italic" size="36.0" />
+         </font></Label>
+      <HBox alignment="CENTER" prefHeight="72.0" prefWidth="544.0">
+         <children>
+            <Label text="Nombre del jugador" />
+            <Region prefHeight="100.0" prefWidth="15.0" />
+            <TextField fx:id="nombreJtext" alignment="CENTER" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="78.0" prefWidth="544.0">
+         <children>
+            <Label text="Correo" />
+            <Region prefHeight="100.0" prefWidth="15.0" />
+            <TextField fx:id="correoJtext" alignment="CENTER" />
+         </children>
+      </HBox>
+      <Label fx:id="agregarText" text=". . ." />
+      <Button fx:id="BotonRegistrar" mnemonicParsing="false" onAction="#registroJugador" text="Registrar" textAlignment="CENTER" />
+      <Region prefHeight="28.0" prefWidth="531.0" />
+      <Button fx:id="BotonRegresar" onAction="#onRegresarMenuClick" text="Regresar" />
+   </children>
+</VBox>

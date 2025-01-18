@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModificarDatosController">
+   <children>
+      <Label text="Modificador de Modelo.Datos">
+         <font>
+            <Font name="Calibri Italic" size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="634.0">
+         <children>
+            <Label text="Ingrese el indice del jugador" />
+            <Region prefHeight="66.0" prefWidth="68.0" />
+            <TextField fx:id="indiceJtext" />
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="634.0">
+         <children>
+            <Label text="Nuevo Nombre" />
+            <Region prefHeight="70.0" prefWidth="72.0" />
+            <TextField fx:id="nombreJtext" />
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="634.0">
+         <children>
+            <Label text="Nuevo correo" />
+            <Region prefHeight="62.0" prefWidth="81.0" />
+            <TextField fx:id="correoJtext" />
+         </children></HBox>
+      <Label fx:id="datosText" text=". . ." />
+      <Button fx:id="BotonCambiarDatos" mnemonicParsing="false" onAction="#modificarDatos" text="Realizar cambio" />
+      <Region prefHeight="23.0" prefWidth="600.0" />
+      <Button fx:id="BotonRegresar" mnemonicParsing="false" onAction="#onRegresarMenuClick" text="Regresar" />
+   </children>
+</VBox>
