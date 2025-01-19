@@ -9,13 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import modelo.Jugador;
-import modelo.LectorJson;
-import modelo.ListaUsuarios;
-import modelo.Usuario;
+import modelo.*;
 
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Objects;
 
 public class IniciarController {
@@ -50,10 +46,14 @@ public class IniciarController {
     private ListaUsuarios users = new ListaUsuarios();
 
     @FXML
-    private Jugador jugador1;
+    private Usuario user1 = new Usuario("dolo", "a@gmail.com", 0, 0, 0);
+    @FXML
+    private Jugador jugador1 = new Jugador(user1);
 
     @FXML
-    private Jugador jugador2;
+    private Usuario user2 = new Usuario("yo", "b@gmail.com", 0, 0, 0);
+    @FXML
+    private Jugador jugador2 = new Jugador(user2);
 
 
     @FXML
@@ -76,8 +76,8 @@ public class IniciarController {
         Commands  errorJugador = new ErrorJugadorCommand(device);
         Boton boton = new Boton();
 
-        this.jugador1 = verificar(playerOneText.getText());
-        this.jugador2 = verificar(playerTwoText.getText());
+        //this.jugador1 = verificar(playerOneText.getText());
+        //this.jugador2 = verificar(playerTwoText.getText());
 
         if (this.jugador1!=null && this.jugador2!=null){
             boton.setCommands(confirmarJugador);
@@ -87,6 +87,7 @@ public class IniciarController {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tablero.fxml")));
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            Partida partida = new Partida(jugador1, jugador2);
         } else{
             boton.setCommands(errorJugador);
             boton.pressButton(agregarText);
