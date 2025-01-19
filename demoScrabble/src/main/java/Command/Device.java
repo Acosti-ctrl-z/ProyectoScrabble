@@ -19,7 +19,7 @@ public class Device {
      * @param label a la que se le asignará el texto
      */
     public void errorJugador(Label label){
-        label.setText("Alguno de los jugadores no esatn registrados");
+        label.setText("Alguno de los jugadores no estan registrados");
     }
 
 }
