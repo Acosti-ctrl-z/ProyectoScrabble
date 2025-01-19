@@ -1,5 +1,6 @@
 package controllers;
 
+import Command.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import modelo.Jugador;
+import modelo.LectorJson;
 import modelo.ListaUsuarios;
 import modelo.Usuario;
 
@@ -44,36 +46,50 @@ public class IniciarController {
     @FXML
     private Label agregarText;
 
-    ListaUsuarios users = new ListaUsuarios();
-    Jugador jugador1;
-    Jugador jugador2;
+    @FXML
+    private ListaUsuarios users = new ListaUsuarios();
 
     @FXML
-    public Jugador verificar(String nombre){
-        Jugador retornar = null;
-        Iterator buscar = this.users.getListaUsuarios().iterator();
+    private Jugador jugador1;
 
-        Usuario usuario = (Usuario)buscar.next();
-        if (usuario.getAlias().equals(nombre)) {
-            retornar = new Jugador(usuario);
-            return retornar;
+    @FXML
+    private Jugador jugador2;
+
+
+    @FXML
+    public Jugador verificar(String nombre) {
+
+        this.users = LectorJson.leerDatos(this.users, "ListaUsuarios");
+        System.out.println(this.users.getListaUsuarios());
+        for (Usuario usuario : this.users.getListaUsuarios()) {
+            if (usuario.getAlias().equals(nombre)) {
+                return new Jugador(usuario);
+            }
         }
-        else{
-            return retornar;
-        }
+        return null;
     }
 
+    @FXML
     public void onIniciarPartida() throws IOException {
-        this.jugador1 = this.verificar(playerOneText.getText());
-        this.jugador2 = this.verificar(playerTwoText.getText());
+        Device device = new Device();
+        Commands  confirmarJugador = new ConfirmarJugadorCommand(device);
+        Commands  errorJugador = new ErrorJugadorCommand(device);
+        Boton boton = new Boton();
+
+        this.jugador1 = verificar(playerOneText.getText());
+        this.jugador2 = verificar(playerTwoText.getText());
+
         if (this.jugador1!=null && this.jugador2!=null){
+            boton.setCommands(confirmarJugador);
+            boton.pressButton(agregarText);
+
             Stage stage = (Stage) BotonPartida.getScene().getWindow();
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tablero.fxml")));
             Scene scene = new Scene(root);
             stage.setScene(scene);
-        }
-        else{
-            agregarText.setText("Nombre de usuario no encontrado, intente de nuevo.");
+        } else{
+            boton.setCommands(errorJugador);
+            boton.pressButton(agregarText);
         }
     }
 }
