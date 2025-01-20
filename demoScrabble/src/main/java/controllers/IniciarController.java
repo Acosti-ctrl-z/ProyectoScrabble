@@ -90,6 +90,7 @@ public class IniciarController {
             stage.setScene(scene);
             stage.setFullScreen(true);
             Partida partida = new Partida(jugador1, jugador2);
+            partida.iniciar();
         } else{
             boton.setCommands(errorJugador);
             boton.pressButton(agregarText);
