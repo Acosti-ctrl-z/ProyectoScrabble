@@ -63,6 +63,12 @@ public class PartidaController {
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numCols; col++) {
                 Button button = new Button();
+
+                button.setMinWidth(42);
+                button.setMinHeight(33);
+                button.setMaxWidth(42);
+                button.setMaxHeight(33);
+
                 gridPane.add(button, col, row);
             }
         }
