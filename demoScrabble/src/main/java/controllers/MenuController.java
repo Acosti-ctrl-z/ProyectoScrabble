@@ -18,9 +18,9 @@ public class MenuController {
     @FXML
     protected void onIniciar() throws IOException {
         Stage stage = (Stage) BotonIniciar.getScene().getWindow();
-        stage.setFullScreen(true);
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ElegirJugador.fxml")));
         Scene scene = new Scene(root);
+        stage.setFullScreen(true);
         stage.setScene(scene);
     }
 
