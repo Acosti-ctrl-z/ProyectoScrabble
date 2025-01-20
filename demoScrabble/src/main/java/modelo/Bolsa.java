@@ -23,119 +23,119 @@ public class Bolsa {
     public Bolsa() {
         int i;
         for(i = 1; i <= 12; ++i) {
-            this.disponibles.add(new Ficha("A", 1, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraA.PNG"));
+            this.disponibles.add(new Ficha("A", 1));
         }
 
         for(i = 1; i <= 2; ++i) {
-            this.disponibles.add(new Ficha("B", 4, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraB.PNG"));
+            this.disponibles.add(new Ficha("B", 4));
         }
 
         for(i = 1; i <= 4; ++i) {
-            this.disponibles.add(new Ficha("C", 3, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraC.PNG"));
+            this.disponibles.add(new Ficha("C", 3));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("CH", 8, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraCH.PNG"));
+            this.disponibles.add(new Ficha("CH", 8));
         }
 
         for(i = 1; i <= 5; ++i) {
-            this.disponibles.add(new Ficha("D", 3, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraD.PNG"));
+            this.disponibles.add(new Ficha("D", 3));
         }
 
         for(i = 1; i <= 12; ++i) {
-            this.disponibles.add(new Ficha("E", 1, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraE.PNG"));
+            this.disponibles.add(new Ficha("E", 1));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("F", 5,"C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraF.PNG"));
+            this.disponibles.add(new Ficha("F", 5));
         }
 
         for(i = 1; i <= 2; ++i) {
-            this.disponibles.add(new Ficha("G", 3, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraF.PNG"));
+            this.disponibles.add(new Ficha("G", 3));
         }
 
         for(i = 1; i <= 2; ++i) {
-            this.disponibles.add(new Ficha("H", 5, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraH.PNG"));
+            this.disponibles.add(new Ficha("H", 5));
         }
 
         for(i = 1; i <= 6; ++i) {
-            this.disponibles.add(new Ficha("I", 1, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraI.PNG"));
+            this.disponibles.add(new Ficha("I", 1));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("J", 10, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraJ.PNG"));
+            this.disponibles.add(new Ficha("J", 10));
         }
 
         for(i = 1; i <= 4; ++i) {
-            this.disponibles.add(new Ficha("L", 2, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraL.PNG"));
+            this.disponibles.add(new Ficha("L", 2));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("LL", 8, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraLL.PNG"));
+            this.disponibles.add(new Ficha("LL", 8));
         }
 
         for(i = 1; i <= 2; ++i) {
-            this.disponibles.add(new Ficha("M", 3, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraM.PNG"));
+            this.disponibles.add(new Ficha("M", 3));
         }
 
         for(i = 1; i <= 5; ++i) {
-            this.disponibles.add(new Ficha("N", 2, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraN.PNG"));
+            this.disponibles.add(new Ficha("N", 2));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("Ñ", 10, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraÑ.PNG"));
+            this.disponibles.add(new Ficha("Ñ", 10));
         }
 
         for(i = 1; i <= 9; ++i) {
-            this.disponibles.add(new Ficha("O", 1, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraO.PNG"));
+            this.disponibles.add(new Ficha("O", 1));
         }
 
         for(i = 1; i <= 2; ++i) {
-            this.disponibles.add(new Ficha("P", 4, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraP.PNG"));
+            this.disponibles.add(new Ficha("P", 4));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("Q", 8, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraQ.PNG"));
+            this.disponibles.add(new Ficha("Q", 8));
         }
 
         for(i = 1; i <= 5; ++i) {
-            this.disponibles.add(new Ficha("R", 2, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraR.PNG"));
+            this.disponibles.add(new Ficha("R", 2));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("RR", 8, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraRR.PNG"));
+            this.disponibles.add(new Ficha("RR", 8));
         }
 
         for(i = 1; i <= 6; ++i) {
-            this.disponibles.add(new Ficha("S", 1, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraS.PNG"));
+            this.disponibles.add(new Ficha("S", 1));
         }
 
         for(i = 1; i <= 4; ++i) {
-            this.disponibles.add(new Ficha("T", 2, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraT.PNG"));
+            this.disponibles.add(new Ficha("T", 2));
         }
 
         for(i = 1; i <= 5; ++i) {
-            this.disponibles.add(new Ficha("U", 5, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraU.PNG"));
+            this.disponibles.add(new Ficha("U", 5));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("V", 4, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraV.PNG"));
+            this.disponibles.add(new Ficha("V", 4));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("X", 10, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraX.PNG"));
+            this.disponibles.add(new Ficha("X", 10));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("Y", 5, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraY.PNG"));
+            this.disponibles.add(new Ficha("Y", 5));
         }
 
         for(i = 1; i <= 1; ++i) {
-            this.disponibles.add(new Ficha("Z", 10, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\LetraZ.PNG"));
+            this.disponibles.add(new Ficha("Z", 10));
         }
 
         for(i = 1; i <= 2; ++i) {
-            this.disponibles.add(new Ficha("&", 0, "C:\\Users\\User\\IdeaProjects\\demoScrabble\\src\\LetrasScrabble\\LetrasScrabble\\Letra&.PNG"));
+            this.disponibles.add(new Ficha("&", 0));
         }
 
     }
@@ -159,4 +159,3 @@ public class Bolsa {
         this.repartirFichas(jugador);
     }
 }
-

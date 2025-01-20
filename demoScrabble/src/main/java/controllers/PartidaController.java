@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import modelo.Ficha;
+import modelo.Partida;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -20,6 +21,9 @@ import java.util.Objects;
 public class PartidaController {
     @FXML
     private GridPane gridPane;
+
+    @FXML
+    private Partida partida;
 
     @FXML
     private Button botonJugar;
@@ -34,18 +38,22 @@ public class PartidaController {
     private Label agregarText;
 
     @FXML
-    protected void onJugar() throws IOException {
-
+    protected int onJugar() throws IOException {
+        return 1;
     }
 
     @FXML
-    protected void onSaltar() throws IOException {
-
+    protected int onSaltar() throws IOException {
+        return 2;
     }
 
     @FXML
-    protected void onRefrescar() throws IOException {
+    protected int onRefrescar() throws IOException {
+        return 3;
+    }
 
+    public void setPartida(Partida partida) {
+        this.partida = partida;
     }
 
     public void initialize() {

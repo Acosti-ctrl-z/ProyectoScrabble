@@ -6,16 +6,14 @@ import javafx.scene.image.Image;
 public class Ficha {
     private String letra;
     private int puntaje;
-    private Image imagen;
 
     /** Se crean las fichas para el juego
      * @param letra Letra del abecedario
      * @param puntaje puntaje de la ficha
      */
-    public Ficha(String letra, int puntaje, String rutaImagen) {
+    public Ficha(String letra, int puntaje) {
         this.letra = letra;
         this.puntaje = puntaje;
-        this.imagen=new Image (rutaImagen);
     }
 
     /**
@@ -48,11 +46,4 @@ public class Ficha {
         this.puntaje = puntaje;
     }
 
-    public Image getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(Image imagen) {
-        this.imagen = imagen;
-    }
 }

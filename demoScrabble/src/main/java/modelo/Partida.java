@@ -7,6 +7,7 @@ public class Partida implements Iniciable {
     private Bolsa bolsa;
     private Jugador jugador1;
     private Jugador jugador2;
+    private int orden;
     //tiempo que ha durado la partida
 
     /** Iniciar de la partida
@@ -19,16 +20,23 @@ public class Partida implements Iniciable {
         System.out.println("Partida iniciada por: "+jugador1.getName()+" y "+jugador2.getName());
     }
 
+    public void setOrden(int orden) {
+        this.orden = orden;
+    }
+
     /** El metodo iniciar() toma al azar uno de los juadores para deteerminar el orden de la partida
      */
     public void iniciar(){
 
         System.out.println("Se procederán a repartir las fichas");
+        System.out.println("Linea 27");
         bolsa=new Bolsa();
+        System.out.println("Linea 29");
         bolsa.repartirFichas(jugador1);
         bolsa.repartirFichas(jugador2);
 
         if (Math.random() * 1==0){
+            System.out.println("Linea 34");
             jugar(jugador1,jugador2);
         }else{
             jugar(jugador2,jugador1);
@@ -61,11 +69,19 @@ public class Partida implements Iniciable {
         }
         jugador.mostrarFichas();
         while (!salir) {
-            System.out.println("Qué desea hacer?: ");
-            System.out.println("1. Colocar piezas.");
-            System.out.println("2. Refrescar piezas y saltar turno.");
-            System.out.println("3. Saltar turno.");
-        }
+            switch (this.orden) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+
+                case 3:
+
+                    break;
+                }
+            }
     }
 
     /** El metodo colocarLetras() se encarga de poner las letras del scrabble
