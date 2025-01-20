@@ -27,6 +27,7 @@ public class MenuController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AgregarUsuario.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML
@@ -42,6 +43,7 @@ public class MenuController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Estadisticas.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML
@@ -57,6 +59,7 @@ public class MenuController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ModificarDatos.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML
@@ -72,10 +75,14 @@ public class MenuController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EliminarJugador.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML
     private Button BotonLista;
+
+    @FXML
+    private Button BotonSalir;
 
     /**
      * controlador para el botón de mostrar lista de jugadores
@@ -87,5 +94,11 @@ public class MenuController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ListaPartidas.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setFullScreen(true);
+    }
+
+    @FXML
+    protected void initialize() {
+        BotonSalir.setOnAction(event -> System.exit(0));
     }
 }

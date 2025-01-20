@@ -16,5 +16,5 @@
          <Font name="Calibri" size="24.0" />
       </font></Label>
   <Button fx:id="BotonIniciar" onAction="#onIniciar" prefHeight="52.0" prefWidth="132.0" text="Iniciar Partida" />
-   <Button fx:id="BotonSalir" mnemonicParsing="false" onAction="#onSalir" prefHeight="53.0" prefWidth="135.0" text="Salir" />
+   <Button fx:id="BotonSalir" mnemonicParsing="false" onAction="#initialize" prefHeight="53.0" prefWidth="135.0" text="Salir" />
 </VBox>

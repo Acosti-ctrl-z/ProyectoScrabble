@@ -25,6 +25,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 400, 400);
         stage.setScene(scene);
         stage.setTitle("Menu");
+        stage.setFullScreen(true);
         stage.show();
     }
     /**Main, instancia y ejecuta el launch

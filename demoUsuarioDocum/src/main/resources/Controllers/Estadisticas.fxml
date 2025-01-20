@@ -18,7 +18,7 @@
       </Label>
       <Button fx:id="BotonCargarInformacion" mnemonicParsing="false" onAction="#estadisticasJugador" text="Mostrar informacion" />
       <Region prefHeight="10.0" prefWidth="600.0" />
-      <HBox layoutX="10.0" layoutY="132.0" prefHeight="25.0" prefWidth="600.0">
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="132.0" prefHeight="25.0" prefWidth="600.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Nombre">
                <HBox.margin>
@@ -37,12 +37,12 @@
             </Label>
             <Label layoutX="86.0" layoutY="10.0" text="Ganadas">
                <padding>
-                  <Insets left="20.0" right="20.0" />
+                  <Insets left="40.0" />
                </padding>
             </Label>
          </children>
       </HBox>
-      <HBox prefHeight="202.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="202.0" prefWidth="600.0">
          <children>
             <ListView fx:id="viewNames" prefHeight="249.0" prefWidth="250.0" />
             <ListView fx:id="viewCorreo" prefHeight="100.0" prefWidth="250.0" />

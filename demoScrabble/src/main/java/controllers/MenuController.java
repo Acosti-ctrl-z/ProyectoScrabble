@@ -28,7 +28,7 @@ public class MenuController {
     private Button BotonSalir;
 
     @FXML
-    protected void onSalir() {
+    protected void initialize() {
         BotonSalir.setOnAction(event -> System.exit(0));
     }
 }

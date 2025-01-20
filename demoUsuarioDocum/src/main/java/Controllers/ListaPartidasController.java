@@ -33,6 +33,7 @@ public class ListaPartidasController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
     @FXML
     private Label listaText;
