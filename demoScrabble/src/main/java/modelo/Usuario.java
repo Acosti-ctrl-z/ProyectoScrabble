@@ -1,7 +1,5 @@
 package modelo;
 
-
-
 /**
  * Clase usuario y sus metodos
  */
@@ -11,17 +9,6 @@ public class Usuario {
     private int puntajeAcumulado;
     private int partidasGanadas;
     private int palabrasJugadas;
-
-    /**
-     * constructor de un usuario
-     */
-    public Usuario() {
-        this.alias = "";
-        this.correo = "";
-        this.palabrasJugadas = 0;
-        this.puntajeAcumulado = 0;
-        this.partidasGanadas = 0;
-    }
 
     /**
      * Construcor de un usuario cuando ya se tienen los datos
@@ -41,15 +28,21 @@ public class Usuario {
 
     /**
      * metodo para modificar los datos de un usuario (decidimos que solo se podian modificar el alias y el correo)
+     */
+    public void modificarDatos(String nombre, String correo) {
+        this.alias = nombre;
+        this.correo = correo;
+    }
 
     /**
      * metodo que muestra en consola los datos del usuario
      */
     public void mostrarDatos() {
-        System.out.println("Alias: " + this.alias + ".");
-        System.out.println("Email: " + this.correo + ".");
-        System.out.println("Palabras jugadas: " + this.palabrasJugadas + ".");
-        System.out.println("Palabras jugadas: " + this.puntajeAcumulado + ".");
+        System.out.println("Nombre: " + this.alias);
+        System.out.println("Correo: " + this.correo);
+        System.out.println("Palabras juagadas: " + this.palabrasJugadas);
+        System.out.println("Puntaje total: "+ this.puntajeAcumulado);
+        System.out.println("Partidas ganadas: "+ this.partidasGanadas);
     }
 
     /**
@@ -109,6 +102,7 @@ public class Usuario {
 
     /**
      * getter del total del puntaje acumulado por el usuario
+     *
      * @return valor del atributo palabrasJugadas
      */
     public int getPuntajeAcumulado() {
@@ -117,6 +111,7 @@ public class Usuario {
 
     /**
      * getter del total de las palabras jugadas por el usuario
+     *
      * @return valor del atributo palabrasJugadas
      */
     public int getPalabrasJugadas() {
@@ -125,6 +120,7 @@ public class Usuario {
 
     /**
      * getter del total de partidas ganadas por el usuario
+     *
      * @return valor del atributo partidasGanadas
      */
     public int getPartidasGanadas() {

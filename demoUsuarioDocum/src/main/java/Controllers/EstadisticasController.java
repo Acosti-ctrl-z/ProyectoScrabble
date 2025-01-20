@@ -88,7 +88,7 @@ public class EstadisticasController {
         Commands estadisticasMostrar = new EstadisticasMostrarCommand(device);
         Boton boton = new Boton();
         this.users = LectorJson.leerDatos(this.users, "ListaUsuarios");
-
+        System.out.println(this.users.getListaUsuarios());
         ObservableList<String> observableAlias =FXCollections.observableArrayList();
         for(Usuario user: this.users.getListaUsuarios()){
             observableAlias.add(user.getAlias());

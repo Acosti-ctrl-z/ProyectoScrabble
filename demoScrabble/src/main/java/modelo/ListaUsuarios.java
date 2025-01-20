@@ -1,9 +1,6 @@
 package modelo;
 
-
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -34,6 +31,18 @@ public class ListaUsuarios {
     public ListaUsuarios() {
     }
 
+    /**
+     * metodo para agregar un usuario nuevo a la lista
+     */
+    public void agregarUsuarioNuevo(String alias, String correo) {
+        this.listaUsuarios.add(new Usuario(alias, correo,0, 0, 0));
+    }
+
+    /**
+     * metodo para agregar un usuario ya creado a la lista
+     * @param usuario el usuario a agregr
+     */
     public void agregarUsuario(Usuario usuario) {
+        this.listaUsuarios.add(usuario);
     }
 }

@@ -76,8 +76,8 @@ public class IniciarController {
         Commands  errorJugador = new ErrorJugadorCommand(device);
         Boton boton = new Boton();
 
-        //this.jugador1 = verificar(playerOneText.getText());
-        //this.jugador2 = verificar(playerTwoText.getText());
+        this.jugador1 = verificar(playerOneText.getText());
+        this.jugador2 = verificar(playerTwoText.getText());
 
         if (this.jugador1!=null && this.jugador2!=null){
             boton.setCommands(confirmarJugador);
