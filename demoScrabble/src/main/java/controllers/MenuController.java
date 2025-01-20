@@ -20,8 +20,8 @@ public class MenuController {
         Stage stage = (Stage) BotonIniciar.getScene().getWindow();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ElegirJugador.fxml")));
         Scene scene = new Scene(root);
-        stage.setFullScreen(true);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML

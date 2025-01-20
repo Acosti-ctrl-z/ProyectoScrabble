@@ -25,11 +25,10 @@ public class IniciarController {
     @FXML
     protected void onRegresarMenu() throws IOException {
         Stage stage = (Stage) BotonRegresar.getScene().getWindow();
-        stage.setFullScreen(true);
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu.fxml")));
         Scene scene = new Scene(root);
-        stage.setFullScreen(true);
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
 
     @FXML
