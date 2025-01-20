@@ -59,7 +59,7 @@ public class IniciarController {
     @FXML
     public Jugador verificar(String nombre) {
 
-        this.users = LectorJson.leerDatos(this.users, "ListaUsuarios");
+        this.users = LectorJson.leerDatos(this.users, "../demoUsuarioDocum/ListaUsuarios");
         System.out.println(this.users.getListaUsuarios());
         for (Usuario usuario : this.users.getListaUsuarios()) {
             if (usuario.getAlias().equals(nombre)) {
