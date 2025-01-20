@@ -63,12 +63,6 @@ public class PartidaController {
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numCols; col++) {
                 Button button = new Button();
-                ImageView imageView = new ImageView();
-
-                imageView.setFitWidth(25);
-                imageView.setFitHeight(25);
-
-                button.setGraphic(imageView);
                 gridPane.add(button, col, row);
             }
         }
