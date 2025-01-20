@@ -38,18 +38,18 @@ public class PartidaController {
     private Label agregarText;
 
     @FXML
-    protected int onJugar() throws IOException {
-        return 1;
+    protected void onJugar() throws IOException {
+
     }
 
     @FXML
-    protected int onSaltar() throws IOException {
-        return 2;
+    protected void onSaltar() throws IOException {
+
     }
 
     @FXML
-    protected int onRefrescar() throws IOException {
-        return 3;
+    protected void onRefrescar() throws IOException {
+
     }
 
     public void setPartida(Partida partida) {
