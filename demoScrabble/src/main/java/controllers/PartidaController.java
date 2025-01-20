@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import modelo.Ficha;
+import modelo.Jugador;
 import modelo.Partida;
 
 import java.io.IOException;
@@ -26,6 +27,9 @@ public class PartidaController {
     private Partida partida;
 
     @FXML
+    private Jugador jugadorActivo;
+
+    @FXML
     private Button botonJugar;
 
     @FXML
@@ -35,21 +39,42 @@ public class PartidaController {
     private Button botonRefrescar;
 
     @FXML
-    private Label agregarText;
+    private Label labelJugadorTurno;
+
+    @FXML
+    private Label labelPuntosJugador;
 
     @FXML
     protected void onJugar() throws IOException {
-
+        partida.setOrden(3);
     }
 
     @FXML
     protected void onSaltar() throws IOException {
-
+        if(jugadorActivo==null){jugadorActivo=this.partida.getPrimerJugador();
+        }
+        jugadorActivo.setSaltos(jugadorActivo.getSaltos()+1);
+        this.cambioTurno();
     }
 
     @FXML
     protected void onRefrescar() throws IOException {
+        if(jugadorActivo==null){jugadorActivo=this.partida.getPrimerJugador();
+        }
+        partida.getBolsa().refrescarPiezas(jugadorActivo);
+        jugadorActivo.setSaltos(jugadorActivo.getSaltos()+1);
+        this.cambioTurno();
+    }
 
+    protected void cambioTurno() throws IOException {
+        if(jugadorActivo==null){jugadorActivo=this.partida.getPrimerJugador();
+        }
+        if(jugadorActivo==partida.getJugador1()){
+            jugadorActivo=partida.getJugador2();
+        }else{
+            jugadorActivo=partida.getJugador1();
+        }
+        labelJugadorTurno.setText("Jugador del turno: "+jugadorActivo.getName());
     }
 
     public void setPartida(Partida partida) {

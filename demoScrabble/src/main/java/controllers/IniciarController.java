@@ -86,13 +86,17 @@ public class IniciarController {
 
             Stage stage = (Stage) BotonPartida.getScene().getWindow();
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tablero.fxml")));
-            FXMLLoader fxmlLoader=new FXMLLoader(Objects.requireNonNull(getClass().getResource("tablero.fxml")));
             Scene scene = new Scene(root);
-            stage.setScene(scene);
             stage.setFullScreen(true);
+
+            FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("tablero.fxml"));
+            Parent root2= fxmlLoader.load();
             Partida partida =new Partida(this.jugador1,this.jugador2);
             PartidaController partidaController=fxmlLoader.getController();
             partidaController.setPartida(partida);
+
+            stage.setScene(scene);
+            stage.show();
         } else{
             boton.setCommands(errorJugador);
             boton.pressButton(agregarText);
